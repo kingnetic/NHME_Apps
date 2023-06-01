@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - NHME</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/gallery.css" asp-append-version="true" >
+
+    @* <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/> *@
+
+
+@* <script src="">
+        $('#Extensiones').dataTable( {
+        "ajax": {
+        "url": "./data/extensiones.json",
+        "dataSrc": "Extensiones"
+    }
+    } );
+</script> *@
+
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <header>
+ 
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">NHME</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                        <ul class="navbar-nav flex-grow-1">
+
+                            @* <li class="nav-item">
+                                <a class="nav-link active" href="#">Inicio
+                                    <span class="visually-hidden">(current)</span>
+                                </a>
+                            </li> *@
+
+                            <li class="nav-item">
+                                <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+
+                            @* <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            </li> *@
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                                    aria-haspopup="true" aria-expanded="false">Sistemas</a>
+                                <div class="dropdown-menu">
+                                <a class="dropdown-item" href="http://localhost:5000/dashboard">Health-Checks</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="http://sysnhme.montespana.com.ni:8086/Usuarios/Login">sysAdministrativo</a>
+                                    <a class="dropdown-item" href="http://sysnhme.montespana.com.ni:8083/Usuarios/Login">sysEjecutivo</a>
+                                    <a class="dropdown-item" href="http://sysnhme.montespana.com.ni:8081/Usuarios/Login">sysRRHH</a>
+                                    <a class="dropdown-item" href="http://sysnhme.montespana.com.ni:8084/Account/Login">sysServicios</a>
+                                    <a class="dropdown-item" href="http://sysnhme.montespana.com.ni:8085">Receta en Línea</a>
+                                    <a class="dropdown-item" href="http://sysnhme.montespana.com.ni:9083">Formato de Subsidios</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="http://cie11/">CIE 11</a>
+                                    <a class="dropdown-item" href="http://sysnhme.montespana.com.ni/aemps-medicamentos/index.html">Vademecum</a>
+                                    
+                                </div>
+                            </li>
+                            
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                                    aria-haspopup="true" aria-expanded="false">Recursos</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Weasis</a>
+                                    <a class="dropdown-item" href="#">NextCloud</a>
+                                    <a class="dropdown-item" href="#">Bluemail</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                                    aria-haspopup="true" aria-expanded="false">Guía Telefónica y Correos</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Extension">Extensiones (Interno)</a>
+                                    <a class="dropdown-item" href="#">Correos (interno)</a>
+                                    <a class="dropdown-item" href="#">Usuarios de Skype</a>
+                                </div>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contáctenos</a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="navbarColor02">
+                        @* <ul class="navbar-nav me-auto"> *@
+  
+                    </div> 
+
+                </div>
+            </nav>
+
+
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted mt-auto">
+        <div class="container">
+            &copy; 2023 - NHME - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script type="text/javascript" src="DataTables/datatables.min.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

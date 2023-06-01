@@ -1,0 +1,43 @@
+{
+    "Sistemas": 
+    [
+        {
+            "Orden": 1,
+            "Sistema": "sysAdministrativo",
+            "Enlace": "http://sysnhme.montespana.com.ni:8086/Usuarios/Login",
+            "Imagen": "./img/administrativo.png"
+        },
+        {   
+            "Orden": 2,
+            "Sistema": "sysEjecutivo",
+            "Enlace": "http://sysnhme.montespana.com.ni:8083/Usuarios/Login",
+            "Imagen": "./img/administrativo.png"
+        },
+        {   
+            "Orden": 3,
+            "Sistema": "sysRRHH",
+            "Enlace": "http://sysnhme.montespana.com.ni:8081/Usuarios/Login",
+            "Imagen": "./img/administrativo.png"
+        },
+        {
+            "Orden": 4,
+            "Sistema": "sysServicios",
+            "Enlace": "http://sysnhme.montespana.com.ni:8084/Account/Login",
+            "Imagen": "./img/administrativo.png"
+        },
+        {
+            "Orden": 5,
+            "Sistema": "Formato de Subsidios",
+            "Enlace": "http://192.168.0.78/formatosDeSubsidios/frm/defaultFormatoSubsidios.aspx?paramEmpty=empty&value=0",
+            "Imagen": "./img/administrativo.png"
+        },
+        {
+            "Orden": 6,
+            "Sistema": "CIE 11",
+            "Enlace": "http://cie11/",
+            "Imagen": "./img/administrativo.png"
+        }
+
+    ]
+      
+}
